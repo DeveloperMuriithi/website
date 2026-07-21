@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
+    rexml (3.4.4)
+    rouge (4.7.0)
+    rss (0.3.1)
+      rexml
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  kramdown
+  rouge
+  rss
+
+RUBY VERSION
+   ruby 3.3.8p144
+
+BUNDLED WITH
+   2.7.2

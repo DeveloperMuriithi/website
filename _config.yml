@@ -1,0 +1,26 @@
+# Core site settings
+site_url:    'https://'
+site_name:   'p4wnstr''s Hut'
+author_name: 'p4wnstr'
+
+# Main directories
+directories:
+  posts:        'posts'
+  pages:        'pages'
+  public:       'public'
+  output:       'build'
+  posts_output: 'build/posts'
+  pages_output: 'build/'
+
+# File, index, RSS naming
+files:
+  header:      '_includes/header.html'
+  footer:      '_includes/footer.html'
+  root_index:  'index.md'
+  posts_index: 'pages/posts.md'
+  rss:         'build/index.rss'
+
+# Extras
+misc:
+  post_count:    5
+  compress_site: true
