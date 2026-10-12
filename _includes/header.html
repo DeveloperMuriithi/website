@@ -3,20 +3,32 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="color-scheme" content="dark light">
+	<meta name="color-scheme" content="light dark">
+	<meta name="description" content="Systems, software, security, and occasional rabbit holes. Notes from the process of figuring things out.">
 	<link rel="icon" href="data:,">
+	<link href="/index.rss" type="application/rss+xml" rel="alternate" title="Notes RSS feed">
 	<title>{{TITLE}}</title>
-	<link href="/index.rss" type="application/rss+xml" rel="alternate" title="RSS feed for blog posts" />
+	<script>
+		(function(){
+			var root=document.documentElement,mode='system',themes=['paper','terminal','phosphor','synthwave','midnight'];
+			try { var saved=localStorage.getItem('glasster-theme'); if(themes.indexOf(saved)!==-1)mode=saved; } catch (error) {}
+			root.setAttribute('data-theme-mode',mode);
+			var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+			var theme=mode==='system'?(dark?'midnight':'paper'):mode;
+			if(mode==='system') { if(dark)root.setAttribute('data-theme',theme); }
+			else root.setAttribute('data-theme',theme);
+		})();
+	</script>
 	<link rel="stylesheet" href="/public/style.css">
 </head>
 
 <body id="top">
-	<header>
-		<nav>
-			<ul>
-				<li><a href="/">home</a></li><li><a href="/about">about</a></li><li><a href="https://codeberg.org/btxx/wruby">download</a></li>
-			</ul>
-		</nav>
+	<header class="site-header">
+		<a class="wordmark" href="/">p4wnstr</a>
+		<button class="theme-toggle" id="theme-toggle" type="button" aria-label="Theme: paper light. Activate to change theme">
+			<span class="theme-dot" aria-hidden="true"></span>
+			<span class="theme-name">paper light</span>
+		</button>
 	</header>
 	<main>
 

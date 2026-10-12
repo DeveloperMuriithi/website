@@ -1,8 +1,13 @@
+RUBY ?= $(shell rbenv which ruby 2>/dev/null || command -v ruby)
+
 build:
 	rm -rf build && mkdir build
-	ruby wruby.rb 
+	$(RUBY) wruby.rb
 
 clean:
 	rm -rf build/*
 
-.PHONY: build clean
+watch:
+	$(RUBY) bin/watch-build.rb
+
+.PHONY: build clean watch
